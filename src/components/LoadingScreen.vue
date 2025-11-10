@@ -114,8 +114,8 @@ defineExpose({
 
     <!-- Loading content -->
     <main class="relative z-10">
-      <h1 class="text-6xl md:text-8xl tracking-[0.1em] text-center font-britain">
-        INDIA BISTRO
+      <h1 class="text-3xl md:text-6xl lg:text-8xl tracking-[0.1em] text-center font-britain">
+        <span class="md:inline-block">INDIA</span> <span class="md:inline-block">BISTRO</span>
       </h1>
     </main>
   </div>
@@ -182,7 +182,26 @@ main {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .loading h1 {
-    font-size: 4rem;
+    font-size: 2.5rem !important;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .loading h1 span {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .loading h1 {
+    font-size: 4rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .loading h1 {
+    font-size: 6rem !important;
   }
 }
 </style>
