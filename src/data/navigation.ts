@@ -13,6 +13,7 @@ const routeMap = {
   gallery: { label: 'Gallery', name: 'gallery' },
   menu: { label: 'Menu', name: 'menu' },
   reservations: { label: 'Reservations', name: 'reservations' },
+  careers: { label: 'Careers', name: 'careers' },
   blog: { label: 'Blog', name: 'blog' },
   contact: { label: 'Contact Us', name: 'contact' }
 } as const satisfies Record<string, RouteNavLink>
@@ -22,6 +23,7 @@ export const headerNavigation: RouteNavLink[] = [
   routeMap.gallery,
   routeMap.menu,
   { label: 'Private Dining', name: routeMap.reservations.name },
+  routeMap.careers,
   routeMap.blog,
   routeMap.contact
 ]
@@ -29,6 +31,7 @@ export const headerNavigation: RouteNavLink[] = [
 export const footerNavigation: Array<RouteNavLink | ExternalNavLink> = [
   routeMap.menu,
   routeMap.reservations,
+  routeMap.careers,
   routeMap.blog,
   routeMap.contact,
   { label: 'Follow Us', href: '#' },

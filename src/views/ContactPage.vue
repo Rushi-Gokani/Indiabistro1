@@ -52,7 +52,7 @@ const pageData = {
     contactInfo: [
       {
         heading: 'INDIA BISTRO, LEEDS',
-        content: '+44 (0) 1111 111 111'
+        content: 'Address: Regents Court, 33-39 Harrogate Rd, Chapel Allerton, Leeds LS7 3PD\nPhone: 0113 340 0236\nEmail: info@indiabistro.co.uk'
       },
 
       {
@@ -168,7 +168,7 @@ const handleSubmit = () => {
               class="contact-info-item"
             >
               <h3 class="info-title">{{ item.heading }}</h3>
-              <p class="info-text">{{ item.content }}</p>
+              <p class="info-text" style="white-space: pre-line;">{{ item.content }}</p>
             </div>
           </div>
 

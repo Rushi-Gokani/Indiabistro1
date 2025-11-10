@@ -60,7 +60,7 @@ const storyCopy =
       </div>
 
       <div class="relative max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-serif mb-8 text-[#000000]">Welcome to India Bistro</h2>
+        <h2 class="hero-title text-4xl font-serif mb-8 text-[#000000]">Welcome to India Bistro</h2>
         <p class="text-lg text-[#000000] leading-relaxed mb-12">
           Experience the authentic flavors of India with our carefully crafted dishes that bring together
           traditional recipes and modern culinary excellence. Every meal is a celebration of India's rich
@@ -152,5 +152,11 @@ const storyCopy =
   letter-spacing: var(--letter-spacing-wide);
   font-family: "PPMori", sans-serif;
   line-height: var(--line-height-tight);
+}
+
+/* Hero title styles */
+.hero-title {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 </style>
