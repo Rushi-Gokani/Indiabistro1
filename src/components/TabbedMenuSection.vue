@@ -21,13 +21,17 @@ interface Props {
   cardDecorationSrc?: string
   decorationImageSrc?: string
   decorationColor?: string
+  showViewFullMenuButton?: boolean
+  showBottomDecoration?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   sectionBgSrc: new URL('../assets/images/section_bg_pattern.svg', import.meta.url).href,
   bgColor: '#f4efe3',
   decorationImageSrc: new URL('../assets/images/diamond_story_section.svg', import.meta.url).href,
-  decorationColor: '#c85a3a'
+  decorationColor: '#c85a3a',
+  showViewFullMenuButton: true,
+  showBottomDecoration: true
 })
 
 const section_bg_pattern = new URL('../assets/images/section_bg_pattern.svg', import.meta.url).href
@@ -364,7 +368,7 @@ watch(
       <!-- Tabs Wrapper -->
       <div class="tabs-wrapper">
         <!-- Tabs Navigation -->
-        <div class="tabs-container flex items-center justify-start gap-4 overflow-x-auto whitespace-nowrap no-scrollbar mb-12">
+        <div class="tabs-container flex items-center justify-center gap-4 overflow-x-auto whitespace-nowrap no-scrollbar mb-12">
         <button
           v-for="category in categories"
           :key="category.id"
@@ -431,6 +435,7 @@ watch(
 
       <!-- View Full Menu Button -->
       <a
+        v-if="props.showViewFullMenuButton"
         class="cta-button"
         href="https://drive.google.com/file/d/1h2bltIsB_OulQEZASHMH99Vs54VN5WD5/view?usp=sharing"
         target="_blank"
@@ -443,10 +448,13 @@ watch(
       </a>
 
       <!-- Bottom Section Decoration -->
-      <div class="mt-12 flex items-center justify-center">
-        <img 
-          :src="props.decorationImageSrc" 
-          alt="Decoration" 
+      <div
+        v-if="props.showBottomDecoration"
+        class="mt-12 flex items-center justify-center"
+      >
+        <img
+          :src="props.decorationImageSrc"
+          alt="Decoration"
           class="h-6 w-auto opacity-90"
           :style="{ filter: `brightness(0) saturate(100%) invert(38%) sepia(47%) saturate(1234%) hue-rotate(337deg) brightness(92%) contrast(87%)` }"
         />
@@ -679,7 +687,7 @@ watch(
   cursor: pointer;
   padding: 0;
   align-self: center;
-  margin: 2rem auto 0;
+  margin: 8rem auto 0;
   width: 100%;
   max-width: 320px;
   display: block;

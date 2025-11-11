@@ -68,14 +68,100 @@
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.02em;
   --letter-spacing-wider: 0.05em;
+
+  /* Shared surface styling */
+  --ib-base-surface: #f5f1e8;
+  --ib-base-surface-texture: url('./assets/images/section_bg_pattern.svg');
+  --ib-base-surface-size: 512px auto;
 }
 
 body {
-  background-color: #111111;
+  background-color: var(--ib-base-surface);
+  background-image: var(--ib-base-surface-texture);
+  background-repeat: repeat;
+  background-size: var(--ib-base-surface-size);
+  background-position: center top;
   color: #F7FAFC;
   font-family: "F37Britain", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.base-surface,
+.app-shell,
+.app-scroll-container,
+[data-scroll-container],
+main[data-scroll-section] {
+  background-color: var(--ib-base-surface);
+  background-image: var(--ib-base-surface-texture);
+  background-repeat: repeat;
+  background-size: var(--ib-base-surface-size);
+  background-position: center top;
+}
+
+/* Remove gaps between sections globally */
+section {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Prevent any unwanted spacing between page components */
+main[data-scroll-section] > section,
+main[data-scroll-section] > * {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Ensure no gaps in router view content and all page views */
+main > * > *,
+main > * > section,
+main > section,
+main > div[class*="Page"],
+main > div[class*="page"] {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Prevent any black lines from showing between sections */
+section,
+main > * {
+  position: relative;
+}
+
+/* Specific fix for page containers */
+div[class*="Page"],
+div[class*="page"] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+div[class*="Page"] > *,
+div[class*="page"] > *,
+div[class*="page"] > section,
+div[class*="Page"] > section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Fix for all section elements within pages */
+div[class*="page"] section,
+div[class*="Page"] section,
+section[class*="section"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Remove any default margins that might cause gaps */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* Global Font Applications */

@@ -41,7 +41,7 @@ const infoSections = [
   },
   {
     title: 'Contact',
-    content: 'Phone: +44 (0) 1111 111 111<br>Email: info@indiabistro.com',
+    content: 'Phone: 0113 340 0236 <br>Email: info@indiabistro.co.uk',
     icon: Phone
   }
 ]

@@ -550,6 +550,7 @@ watch(
 <template>
   <section
     class="relative w-full bg-repeat py-20 overflow-hidden"
+    style="margin: 0;"
     :style="{
       'background-image': `url(${sectionBgPattern})`,
       'background-color': props.backgroundColor

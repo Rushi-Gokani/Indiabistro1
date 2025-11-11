@@ -333,12 +333,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="app-shell bg-background font-sans">
+  <div class="app-shell base-surface font-sans">
     <LoadingScreen />
     <AppHeader />
     <div
       ref="containerRef"
-      class="app-scroll-container bg-background font-sans"
+      class="app-scroll-container base-surface font-sans"
       id="main"
       data-scroll-container
     >

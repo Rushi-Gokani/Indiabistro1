@@ -215,7 +215,7 @@ const pageData = {
 </script>
 
 <template>
-  <div class="home-page">
+  <div class="home-page page-content">
     <!-- Popup Modal -->
     <HomePopup v-bind="pageData.popupData" />
 
@@ -270,5 +270,17 @@ const pageData = {
 <style scoped>
 .home-page {
   width: 100%;
+}
+
+/* Remove gaps between sections */
+.section {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Ensure no gaps between any sections */
+.home-page > * {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 </style>

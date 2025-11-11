@@ -1,5 +1,5 @@
 <template>
-  <section ref="sliderWrapper" class="relative overflow-hidden bg-background" style="z-index: 1;" :style="{
+  <section ref="sliderWrapper" class="relative overflow-hidden base-surface" style="z-index: 1;" :style="{
     'background-image': `url(${section_bg_pattern})`,
     'background-repeat': 'repeat',
     'background-size': 'auto',

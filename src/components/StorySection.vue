@@ -94,6 +94,7 @@ const sectionBgSrc = new URL('../assets/images/section_bg_pattern.svg', import.m
   color: white;
   text-align: center;
   padding: 4rem 0;
+  margin: 0;
   overflow: hidden;
   /* Method 1: Multiple backgrounds (pattern + color) */
   background: var(--bg-color, #8D3A30);
